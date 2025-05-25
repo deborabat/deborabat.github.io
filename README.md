@@ -34,5 +34,6 @@ A organização dos arquivos e diretórios do projeto segue a seguinte estrutura
 
 Este projeto foi desenvolvido por:
 
-* **Debora Batista Pereira de Almeida**
+* **Debora Batista Pereira de Almeida** Ra: 1997157
+  
     * [Currículo (Link aqui)](https://deborabat.github.io/curriculo_debora.html) - 
