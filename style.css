@@ -375,19 +375,19 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ocupa a altura total da viewport */
+  min-height: 100vh; 
   margin: 0;
-  padding: 20px; /* Padding para evitar que o conteúdo encoste nas bordas em telas pequenas */
-  box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+  padding: 20px; 
+  box-sizing: border-box;
 }
 
 /* Contêiner principal para o formulário (cadastro ou login) */
-#auth-container, /* Usar o ID corrigido no HTML */
+#auth-container, 
 #login {
-  background-color: var(--bg-light); /* Fundo branco para o card */
+  background-color: var(--bg-light); 
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais destacada */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
   width: 100%;
   max-width: 450px; /* Largura máxima para os formulários */
   text-align: center;
@@ -429,10 +429,10 @@ a {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid var(--border-color);
-  border-radius: 8px; /* Bordas mais arredondadas para os inputs */
+  border-radius: 8px; 
   font-size: 1em;
   color: var(--text-dark);
-  background-color: #fcfcfc; /* Fundo levemente off-white para inputs */
+  background-color: #fcfcfc; 
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -464,7 +464,7 @@ a {
   transform: translateY(-2px); /* Pequeno efeito de elevação */
 }
 
-/* Estilo para link de "Já tem uma conta?" / "Não tem uma conta?" se você adicionar */
+/* Estilo para link de "Já tem uma conta?" / "Não tem uma conta?" */
 .auth-switch {
   margin-top: 25px;
   font-size: 0.95em;
@@ -521,44 +521,43 @@ a {
 #banner-principal {
   display: flex;
   align-items: center;
-  padding: 60px 20px; /* Aumentei o padding vertical e adicionei horizontal */
-  background-color: #f9f9f9; /* Adicionei uma cor de fundo sutil para a seção */
-  border-radius: 10px; /* Arredondei as bordas da seção */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Adicionei uma sombra suave */
-  margin-bottom: 40px; /* Mais espaço abaixo da seção */
+  padding: 60px 20px; 
+  background-color: #f9f9f9; 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+  margin-bottom: 40px; 
 }
 
 .banner-img {
-  max-width: 45%; /* Reduzi um pouco a largura máxima da imagem */
+  max-width: 45%; 
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte na imagem */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
 }
-
 .texto-banner {
-  margin-left: 40px; /* Aumentei a margem à esquerda do texto */
+  margin-left: 40px; 
 }
 
 .texto-banner h2 {
-  font-size: 2.8em; /* Aumentei um pouco o tamanho da fonte do título */
+  font-size: 2.8em;
   color: #28a745; /* Cor 3 */
-  margin-bottom: 15px; /* Mais espaço abaixo do título */
+  margin-bottom: 15px; 
   font-family: 'Roboto', sans-serif;
-  line-height: 1.2; /* Melhora a legibilidade de títulos longos */
+  line-height: 1.2; 
 }
 
 .texto-banner p {
-  font-size: 1.2em; /* Aumentei um pouco o tamanho da fonte do parágrafo */
-  line-height: 2.0; /* Aumentei o line-height para melhor leitura */
-  margin-bottom: 30px; /* Mais espaço abaixo do parágrafo */
+  font-size: 1.2em; 
+  line-height: 2.0; 
+  margin-bottom: 30px; 
   font-style: italic; /* Estilo da fonte */
-  color: #555; /* Cor do texto ligeiramente mais suave */
+  color: #555;
 }
 
 /* Estilo do botão dentro do banner */
 .texto-banner .botao-destaque {
   display: inline-block;
-  background-color: #007bff; /* Cor primária para o botão */
+  background-color: #007bff; 
   color: #fff;
   padding: 12px 25px;
   border-radius: 5px;
@@ -574,23 +573,23 @@ a {
 /* Media query para telas menores */
 @media (max-width: 768px) {
   #banner-principal {
-      flex-direction: column; /* Empilha imagem e texto em telas menores */
-      text-align: center; /* Centraliza o texto */
-      padding: 40px 20px; /* Reduz o padding vertical */
+      flex-direction: column; 
+      text-align: center; 
+      padding: 40px 20px; 
   }
 
   .banner-img {
-      max-width: 80%; /* Aumenta a largura da imagem em telas menores */
-      margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
-      margin-left: 0; /* Remove a margem esquerda */
+      max-width: 80%;
+      margin-bottom: 20px; 
+      margin-left: 0; 
   }
 
   .texto-banner {
-      margin-left: 0; /* Remove a margem esquerda */
+      margin-left: 0; 
   }
 
   .texto-banner h2 {
-      font-size: 2.2em; /* Reduz o tamanho da fonte do título */
+      font-size: 2.2em;
   }
 
   .texto-banner p {
