@@ -11,21 +11,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <h1 class="logo">Educação para Todos</h1>
-        <nav>
-            <ul>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#" class="botao-destaque">Acesse a Plataforma</a></li>
-            </ul>
+  <header class="main-header">
+        <h1 class="logo">Tech para Todos</h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">Início</a></li>
+            <li><a href="#cursos" class="nav-link">Cursos</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+          </ul>
         </nav>
     </header>
 
     <main class="container">
         <section id="banner-principal">
-            <img src="./figs/banner_educacao.jpg" alt="Banner sobre ensino remoto gratuito" class="banner-img">
+            <img src="./img/banner_educaca.png" alt="Banner sobre ensino remoto gratuito" class="banner-img">
             <div class="texto-banner">
                 <h2>Aprenda de onde estiver, sem custos!</h2>
                 <p>Uma iniciativa para promover o acesso à educação de qualidade, alinhada ao ODS 04.</p>
@@ -33,7 +32,7 @@
             </div>
         </section>
 
-        <section id="cursos" class="secao-conteudo">
+        <section id="cursos" class="courses-section container">
             <h2>Nossos Cursos</h2>
             <div class="lista-cursos">
                 <div class="card-curso">
@@ -41,52 +40,53 @@
                     <h3>Programação para Iniciantes</h3>
                     <p><span>Domine os fundamentos da programação e comece sua jornada no mundo da tecnologia.</span></p>
                     <a href="#" class="link-curso">Saiba mais</a>
-                    <img src="./figs/curso_programacao.jpg" alt="Imagem do curso de programação" class="imagem-curso">
                 </div>
                 <div class="card-curso">
                     <i class="fas fa-language fa-3x icone-secao"></i>
                     <h3>Inglês Básico</h3>
                     <p><span>Aprenda o inglês essencial para comunicação e oportunidades globais.</span></p>
                     <a href="#" class="link-curso">Saiba mais</a>
-                    <img src="./figs/curso_ingles.jpg" alt="Imagem do curso de inglês" class="imagem-curso">
                 </div>
                 <div class="card-curso">
                     <i class="fas fa-chalkboard-teacher fa-3x icone-secao"></i>
                     <h3>Matemática Fundamental</h3>
                     <p><span>Reforce seus conhecimentos em matemática para diversas áreas.</span></p>
                     <a href="#" class="link-curso">Saiba mais</a>
-                    <img src="./figs/curso_matematica.jpg" alt="Imagem do curso de matemática" class="imagem-curso">
                 </div>
                 <div class="card-curso">
                     <i class="fas fa-paint-brush fa-3x icone-secao"></i>
                     <h3>Introdução ao Design Gráfico</h3>
                     <p><span>Explore o mundo do design e crie visuais incríveis.</span></p>
                     <a href="#" class="link-curso">Saiba mais</a>
-                    <img src="./figs/curso_design.jpg" alt="Imagem do curso de design gráfico" class="imagem-curso">
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="secao-conteudo">
-            <h2>Sobre Nossa Iniciativa</h2>
-            <p>Somos um grupo de entusiastas da educação comprometidos em oferecer oportunidades de aprendizado de qualidade para todos, independentemente de sua localização ou condição financeira. Acreditamos que a educação é a chave para um futuro melhor e alinhamos nossos esforços com o Objetivo de Desenvolvimento Sustentável número 4: Educação de Qualidade.</p>
-            <p><span>Nossa plataforma é totalmente gratuita e desenvolvida com o apoio de voluntários e parceiros que compartilham nossa visão.</span></p>
-            <img src="./figs/sobre_nos.jpg" alt="Imagem sobre nossa iniciativa" class="imagem-sobre">
-        </section>
-
-        <section id="contato" class="secao-conteudo">
-            <h2>Entre em Contato</h2>
-            <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
-            <ul>
-                <li><i class="fas fa-envelope"></i> <a href="mailto:contato@ensinogratuito.com">contato@ensinogratuito.com</a></li>
-                <li><i class="fas fa-phone"></i> (XX) XXXXX-XXXX</li>
-                <li><i class="fas fa-map-marker-alt"></i> Sua Cidade, Brasil</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Ensino Remoto Gratuito - Promovendo o ODS 04</p>
-    </footer>
+        <section id="contato" class="contact-section">
+          <div class="container">
+              <h2 class="section-title">Fale Conosco</h2>
+              <p>Tem dúvidas ou quer fazer parte da nossa comunidade?</p>
+              <a href="mailto:contato@techparatodos.org" class="btn-primary">Envie um E-mail</a>
+              <p>Siga-nos nas redes sociais:</p>
+              <div class="social-links">
+                  <a href="#" target="_blank"><img src="./img/facebook_icon.png" alt="Facebook" class="social-icon"></a>
+                  <a href="#" target="_blank"><img src="./img/instagram_icon.png" alt="Instagram" class="social-icon"></a>
+                  <a href="#" target="_blank"><img src="./img/linkedin_icon.png" alt="LinkedIn" class="social-icon"></a>
+              </div>
+          </div>
+      </section>
+        <footer class="main-footer">
+          <div class="container footer-content">
+              <p>&copy; 2025 Tech para Todos. Todos os direitos reservados.</p>
+              <nav class="footer-nav">
+                  <ul>
+                      <li><a href="#sobre" class="footer-link">Sobre Nós</a></li>
+                      <li><a href="#cursos" class="footer-link">Nossos Cursos</a></li>
+                      <li><a href="#" class="footer-link">Termos de Uso</a></li>
+                      <li><a href="https://deborabat.github.io/curriculo_debora.html" target="_blank" class="footer-link">Currículo Debora</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </footer>
 </body>
 </html>

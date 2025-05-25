@@ -1,103 +1,601 @@
-/* Estilos Gerais */
+/* Importação de fontes externas */
+@import url('[https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap)');
+
+/* Variáveis CSS para cores */
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #28a745; /* Verde para botões secundários */
+    --accent-color: #ffc107; /* Amarelo de destaque */
+    --text-dark: #343a40; /* Texto escuro */
+    --text-light: #f8f9fa; /* Texto claro */
+    --bg-light: #ffffff; /* Fundo claro */
+    --bg-gray: #f8f9fa; /* Fundo cinza suave */
+    --border-color: #dee2e6; /* Cor de borda */
+}
+
+/* Seletor por elemento */
 body {
-  font-family: 'Open Sans', sans-serif; /* Fonte 1 */
-  background-color: #f8f9fa; /* Cor de fundo */
-  color: #343a40; /* Cor da fonte principal */
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: 'Poppins', sans-serif; /* Primeira fonte principal */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-gray);
 }
 
+/* Seletor universal opcional */
+* {
+    box-sizing: border-box;
+}
+
+/* Seletor por ID */
+#sobre {
+    background-color: var(--bg-light);
+    padding: 60px 0;
+}
+
+/* Seletor por classe */
 .container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Estilos do Cabeçalho */
-header {
-  background-color: #fff;
-  color: #007bff; /* Cor 1 */
-  padding: 20px 0;
+/* Seletor por atributo */
+a.footer-link::after { 
+    content: ' \00a0\2192'; /* Adiciona uma seta após links do rodapé */
+    font-size: 0.8em;
+}
+
+/* Seletor por pseudo-classe (link:hover) */
+a.nav-link:hover,
+a.button-link:hover,
+a.btn-primary:hover,
+a.btn-secondary:hover,
+a.footer-link:hover {
+    color: var(--accent-color); /* Altera a cor do link ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Estilos gerais */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Segunda fonte para títulos */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700; /* Estilo à fonte: negrito */
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Decoração de texto 1 */
+}
+
+h2 {
+    font-size: 2.5em;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+    text-transform: uppercase; /* Decoração de texto 2 */
+}
+
+h3 {
+    font-size: 1.8em;
+    font-style: italic; /* Estilo à fonte: itálico */
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; 
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav .nav-link {
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.main-nav .nav-link.button-link {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: 1px solid var(--primary-color);
+}
+
+.main-nav .nav-link.button-link:hover {
+    background-color: #0056b3;
+    color: var(--text-light);
+}
+
+/* Seção Hero */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    color: var(--text-light);
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: var(--text-light);
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+/* Seção Sobre */
+.about-section {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.about-item {
+    background-color: var(--bg-gray);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.about-item .about-icon {
+    width: 60px; 
+    height: auto; /* Mantém a proporção da altura */
+    margin-bottom: 15px;
+}
+
+.about-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.about-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.about-text {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção Cursos */
+.courses-section {
+    padding: 60px 0;
+    background-color: var(--bg-gray);
+    text-align: center;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.course-card {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-card .course-img {
+    width: 80px; 
+    height: auto; /* Mantém a proporção da altura */
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    color: var(--primary-color);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e0a800;
+}
+
+/* Seção Contato */
+.contact-section {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: var(--text-light);
+    border-color: var(--accent-color);
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 30px; 
+    height: auto; /* Mantém a proporção da altura */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+.main-footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-nav .footer-link {
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+.auth-body {
+  background-color: var(--bg-gray); /* Fundo claro para contrastar */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header .logo {
-  font-size: 2em;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif; /* Fonte 2 */
-  margin-left: 20px;
-}
-
-header nav ul {
-  list-style: none;
-  padding: 0;
+  min-height: 100vh; /* Ocupa a altura total da viewport */
   margin: 0;
-  display: flex;
-  margin-right: 20px;
+  padding: 20px; /* Padding para evitar que o conteúdo encoste nas bordas em telas pequenas */
+  box-sizing: border-box; /* Garante que o padding não adicione largura extra */
 }
 
-header nav ul li {
-  margin-left: 20px;
+/* Contêiner principal para o formulário (cadastro ou login) */
+#auth-container, /* Usar o ID corrigido no HTML */
+#login {
+  background-color: var(--bg-light); /* Fundo branco para o card */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais destacada */
+  width: 100%;
+  max-width: 450px; /* Largura máxima para os formulários */
+  text-align: center;
+  margin: 20px auto; /* Centraliza e adiciona margem vertical para espaçamento entre formulários se estiverem na mesma página */
 }
 
-header nav ul li a {
+#auth-container h2,
+#login h2 {
+  color: var(--primary-color); /* Cor dos títulos do formulário */
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Decoração de texto */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+/* Estilos para os campos de formulário (divs com label e input) */
+#auth-container form div,
+#login form div {
+  margin-bottom: 20px;
+  text-align: left; /* Alinha o label à esquerda */
+}
+
+#auth-container label,
+#login label {
+  display: block; /* Garante que o label ocupe sua própria linha */
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95em;
+}
+
+#auth-container input[type="text"],
+#auth-container input[type="email"],
+#auth-container input[type="password"],
+#auth-container input[type="date"],
+#login input[type="email"],
+#login input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px; /* Bordas mais arredondadas para os inputs */
+  font-size: 1em;
+  color: var(--text-dark);
+  background-color: #fcfcfc; /* Fundo levemente off-white para inputs */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#auth-container input:focus,
+#login input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Sombra ao focar */
+}
+
+/* Estilo para o botão de envio */
+.botao-enviar {
+  background-color: var(--secondary-color); /* Cor do botão (verde) */
+  color: var(--text-light); /* Texto branco */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 1.1em;
+  font-weight: 700; /* Negrito */
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase; /* Decoração de texto */
+  letter-spacing: 0.5px;
+}
+
+.botao-enviar:hover {
+  background-color: #218838; /* Escurece no hover */
+  transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
+
+/* Estilo para link de "Já tem uma conta?" / "Não tem uma conta?" se você adicionar */
+.auth-switch {
+  margin-top: 25px;
+  font-size: 0.95em;
+  color: #666;
+}
+
+.auth-switch a {
+  color: var(--primary-color);
+  font-weight: 600;
   text-decoration: none;
-  color: #343a40;
-  font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-  color: #007bff; /* Altera a cor do link ao passar o mouse */
-  text-decoration: underline dotted #343a40; /* Decoração de texto 1 e 2 */
+.auth-switch a:hover {
+  text-decoration: underline;
 }
 
-.botao-destaque {
-  background-color: #007bff; /* Cor 2 */
-  color: #fff !important;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
 
-.botao-destaque:hover {
-  background-color: #0056b3;
-  text-decoration: none !important;
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav .nav-link {
+        width: 100%;
+        display: block;
+    }
+    .hero-title {
+        font-size: 2.5em;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .about-grid, .course-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-nav ul {
+        flex-direction: column;
+    }
 }
 
 /* Estilos da Seção Principal (Banner) */
 #banner-principal {
   display: flex;
   align-items: center;
-  padding: 40px 0;
+  padding: 60px 20px; /* Aumentei o padding vertical e adicionei horizontal */
+  background-color: #f9f9f9; /* Adicionei uma cor de fundo sutil para a seção */
+  border-radius: 10px; /* Arredondei as bordas da seção */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Adicionei uma sombra suave */
+  margin-bottom: 40px; /* Mais espaço abaixo da seção */
 }
 
 .banner-img {
-  max-width: 50%;
+  max-width: 45%; /* Reduzi um pouco a largura máxima da imagem */
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte na imagem */
 }
 
 .texto-banner {
-  margin-left: 30px;
+  margin-left: 40px; /* Aumentei a margem à esquerda do texto */
 }
 
 .texto-banner h2 {
-  font-size: 2.5em;
+  font-size: 2.8em; /* Aumentei um pouco o tamanho da fonte do título */
   color: #28a745; /* Cor 3 */
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Mais espaço abaixo do título */
   font-family: 'Roboto', sans-serif;
+  line-height: 1.2; /* Melhora a legibilidade de títulos longos */
 }
 
 .texto-banner p {
-  font-size: 1.1em;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  font-size: 1.2em; /* Aumentei um pouco o tamanho da fonte do parágrafo */
+  line-height: 2.0; /* Aumentei o line-height para melhor leitura */
+  margin-bottom: 30px; /* Mais espaço abaixo do parágrafo */
   font-style: italic; /* Estilo da fonte */
+  color: #555; /* Cor do texto ligeiramente mais suave */
+}
+
+/* Estilo do botão dentro do banner */
+.texto-banner .botao-destaque {
+  display: inline-block;
+  background-color: #007bff; /* Cor primária para o botão */
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.texto-banner .botao-destaque:hover {
+  background-color: #0056b3;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  #banner-principal {
+      flex-direction: column; /* Empilha imagem e texto em telas menores */
+      text-align: center; /* Centraliza o texto */
+      padding: 40px 20px; /* Reduz o padding vertical */
+  }
+
+  .banner-img {
+      max-width: 80%; /* Aumenta a largura da imagem em telas menores */
+      margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+      margin-left: 0; /* Remove a margem esquerda */
+  }
+
+  .texto-banner {
+      margin-left: 0; /* Remove a margem esquerda */
+  }
+
+  .texto-banner h2 {
+      font-size: 2.2em; /* Reduz o tamanho da fonte do título */
+  }
+
+  .texto-banner p {
+      font-size: 1.1em; /* Reduz o tamanho da fonte do parágrafo */
+  }
 }
 
 /* Estilos das Seções de Conteúdo */
@@ -164,94 +662,3 @@ header nav ul li a:hover {
   border-radius: 5px;
   margin-top: 15px;
 }
-
-#sobre p span {
-  font-weight: bold;
-  color: #28a745;
-}
-
-#contato ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-#contato ul li {
-  margin-bottom: 10px;
-}
-
-#contato ul li i {
-  margin-right: 10px;
-  color: #007bff;
-}
-
-#contato ul li a {
-  text-decoration: none;
-  color: #343a40;
-  transition: color 0.3s ease;
-}
-
-#contato ul li a:hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-/* Estilos do Rodapé */
-footer {
-  background-color: #343a40;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-}
-
-/* Estilos da Página de Login e Cadastro */
-#cadastro, #login {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  width: 400px;
-}
-
-#cadastro h2, #login h2 {
-  color: #007bff;
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-}
-
-#cadastro div, #login div {
-  margin-bottom: 15px;
-}
-
-#cadastro label, #login label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #343a40;
-}
-
-#cadastro input[type="text"],
-#cadastro input[type="email"],
-#cadastro input[type="password"],
-#cadastro input[type="date"],
-#login input[type="email"],
-#login input[type="password"] {
-  width: calc(100% - 12px);
-  padding: 8px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.botao-enviar {
-  background-color: #28a745;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5
-} 

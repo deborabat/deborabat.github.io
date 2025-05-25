@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login e Cadastro</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech para Todos - Capacitação online</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="container">
-        <section id="cadastro">
+  <header class="main-header">
+    <div class="container header-content">
+      <img src="./img/logo.png" alt="Logo Tech para Todos" class="logo">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#cursos" class="nav-link">Cursos Gratuitos</a></li>
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+            <li><a href="#login" class="nav-link button-link">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+        <section class="hero-section" style="background-image: url('./img/hero_bg.jpg');">
+            <div class="container hero-content">
+                <h1 class="hero-title">Capacitação em TI para um Futuro Melhor</h1>
+                <p class="hero-subtitle">Transformando vidas através da educação tecnológica gratuita e acessível.</p>
+                <a href="#cadastro" class="btn-primary">Comece Agora!</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section container">
+            <h2 class="section-title">Sobre o Projeto <span class="highlight">Tech para Todos</span></h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <img src="./img/icone_educacao.png" alt="Ícone Educação" class="about-icon">
+                    <h3>Missão</h3>
+                    <p>Democratizar o acesso à educação em tecnologia, capacitando indivíduos para o mercado de trabalho digital e promovendo a inclusão social.</p>
+                </div>
+                <div class="about-item">
+                    <img src="./img/icone_comunidade.png" alt="Ícone Comunidade" class="about-icon">
+                    <h3>Visão</h3>
+                    <p>Ser referência em educação tecnológica comunitária, gerando impacto positivo e criando oportunidades para um futuro mais próspero para todos.</p>
+                </div>
+            </div>
+            <p class="about-text">Acreditamos que a tecnologia é uma ferramenta poderosa para a transformação social. Nosso objetivo é fornecer as habilidades necessárias para que mais pessoas possam aproveitar as oportunidades do século XXI.</p>
+        </section>
+
+        <section id="cursos" class="courses-section container">
+            <h2 class="section-title">Nossos Cursos Gratuitos</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="./img/curso_html.png" alt="Curso HTML" class="course-img">
+                    <h3>HTML Essencial</h3>
+                    <p>Aprenda a estrutura fundamental da web. Ideal para iniciantes.</p>
+                    <a href="#" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="course-card">
+                    <img src="./img/curso_css.png" alt="Curso CSS" class="course-img">
+                    <h3>CSS Estilização</h3>
+                    <p>Dê vida às suas páginas web com estilos e design responsivo.</p>
+                    <a href="#" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="course-card">
+                    <img src="./img/curso_js.png" alt="Curso JavaScript" class="course-img">
+                    <h3>JavaScript Básico</h3>
+                    <p>Adicione interatividade e dinamismo aos seus projetos web.</p>
+                    <a href="#" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="course-card">
+                    <img src="./img/curso_js.png" alt="Curso Python" class="course-img">
+                    <h3>Lógica de Programação</h3>
+                    <p>Desenvolva seu raciocínio lógico e prepare-se para qualquer linguagem.</p>
+                    <a href="#" class="btn-secondary">Ver Detalhes</a>
+                </div>
+            </div>
+        </section>
+        <section id="auth-container">
             <h2>Cadastre-se</h2>
             <form action="login.html" method="post">
                 <div>
@@ -40,7 +109,7 @@
 
         <section id="login">
             <h2>Login</h2>
-            <form action="principal.html" method="post">
+            <form action="pricipal.html" method="post">
                 <div>
                     <label for="email_login">E-mail:</label>
                     <input type="email" id="email_login" name="email_login" required>
@@ -52,6 +121,32 @@
                 <button type="submit" class="botao-enviar">Entrar</button>
             </form>
         </section>
+        <section id="contato" class="contact-section">
+          <div class="container">
+              <h2 class="section-title">Fale Conosco</h2>
+              <p>Tem dúvidas ou quer fazer parte da nossa comunidade?</p>
+              <a href="mailto:contato@techparatodos.org" class="btn-primary">Envie um E-mail</a>
+              <p>Siga-nos nas redes sociais:</p>
+              <div class="social-links">
+                  <a href="#" target="_blank"><img src="./img/facebook_icon.png" alt="Facebook" class="social-icon"></a>
+                  <a href="#" target="_blank"><img src="./img/instagram_icon.png" alt="Instagram" class="social-icon"></a>
+                  <a href="#" target="_blank"><img src="./img/linkedin_icon.png" alt="LinkedIn" class="social-icon"></a>
+              </div>
+          </div>
+      </section>
+        <footer class="main-footer">
+          <div class="container footer-content">
+              <p>&copy; 2025 Tech para Todos. Todos os direitos reservados.</p>
+              <nav class="footer-nav">
+                  <ul>
+                      <li><a href="#sobre" class="footer-link">Sobre Nós</a></li>
+                      <li><a href="#cursos" class="footer-link">Nossos Cursos</a></li>
+                      <li><a href="#" class="footer-link">Termos de Uso</a></li>
+                      <li><a href="https://deborabat.github.io/curriculo_debora.html" target="_blank" class="footer-link">Currículo Debora</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </footer>
     </main>
 </body>
 </html>
