@@ -17,6 +17,7 @@ A organização dos arquivos e diretórios do projeto segue a seguinte estrutura
 
 ├── index.html            # Página Principal da Plataforma (Home)
 ├── pricipal.html         # Página de acesso aos cursos da plataforma
+├── cv.html         # Página de curriculo de Debora
 ├── style.css             # Folha de Estilos CSS para todo o projeto
 └── img/                  # Diretório para todas as imagens e ícones do projeto
 ├── logo.png          # Logotipo da Plataforma
@@ -36,4 +37,4 @@ Este projeto foi desenvolvido por:
 
 * **Debora Batista Pereira de Almeida** Ra: 1997157
   
-    * [Currículo (Link aqui)](https://deborabat.github.io/curriculo_debora.html) - 
+    * [Currículo (Link aqui)](cv.htmlcv.html) 
